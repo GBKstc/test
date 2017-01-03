@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+//input 按钮点击上传的时候 会触发submit事件
+</body>
+<script type="text/javascript">
+    uploadFrameShow:function (rs) {
+        let self = this;
+        let oReader = new FileReader();
+        let files = self.J_imgInp[0].files;
+        oReader.readAsDataURL(files[0]);
+        //console.log(self.J_imgInp[0].files);
+        oReader.onload = function(){
+            J_imgCon.src = this.result;
+            //self.J_loadWrap.css('display','none');
+        }
+        $('body').append('<iframe style="display:none;" Id="' + rs.tar + '" name="' + rs.tar + '"></iframe>');
+        self.J_fileform.attr('action',rs.url);
+        self.J_fileform.attr('target',rs.tar);
+        self.J_fileform.submit();
+        //console.log('submit');
+        let FormTT = setInterval(function(){
+            //console.log(window.frames[rs.tar].document.getElementsByTagName('body')[0]);
+            if(!window.frames[rs.tar].document.getElementsByTagName('body')[0].innerHTML){
+                return false;
+            } else{
+                var obj = eval('(' + window.frames[rs.tar].document.getElementsByTagName('body')[0].innerHTML + ')');
+                console.log(obj.imageUrl.split('?')[0]);
+                self.conData.img = obj.imageUrl.split('?')[0];
+                //$('.fileToUpload').val('');
+                self.imgDown=1;
+                $('#'+rs.tar).remove();
+                clearInterval(FormTT);
+            }
+        },100);
+    },
+</script>
+</html>
