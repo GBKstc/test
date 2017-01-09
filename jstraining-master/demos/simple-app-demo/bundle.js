@@ -44,9 +44,11 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * Created by ouer on 2017/1/7.
+	 */
 	const $ = __webpack_require__(1);
-	$('h1').css({ color: 'red'});
-
+	$('h1').css({color:'yellow'});
 
 /***/ },
 /* 1 */

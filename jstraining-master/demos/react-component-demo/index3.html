@@ -12,20 +12,23 @@
   class Mytitle extends React.Component{
       constructor(...args){
           super(...args);
-          this.state = {
-              name:'高炳快'
-          };
-      }
-      handName(e){
-          let name = e.target.value;
+          this.state={
+              name:'访问者',
+              isClick:true
+          }
+      };
+      handleName(e){
+          let mytime = new Date;
+          let myTime = mytime.getHours()+':'+mytime.getMinutes()+':'+mytime.getSeconds();
+          let isClick = !this.state.isClick;
           this.setState({
-              name:name
+              isClick:isClick,
+              name:isClick?'Hellow World!':myTime
           })
       };
       render(){
           return <div>
-            <input type="text" onChange={this.handName.bind(this)}/>
-            <p>你好,{this.state.name}</p>
+            <p onClick={this.handleName.bind(this)}>你好！{this.state.name}</p>
           </div>
       }
   }
@@ -33,6 +36,9 @@
       <Mytitle></Mytitle>,
       document.getElementById('example')
   );
+
+
+
 
   /*class MyTitle extends React.Component {
     constructor(...args) {

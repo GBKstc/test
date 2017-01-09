@@ -13,23 +13,20 @@
       constructor(...args){
           super(...args);
           this.state={
-              name:'Hello World!'
+              name:'Hello World!',
+              isClick:false
           }
       }
       handleClick(e){
           let h1Text = e.target.innerHTML;
-          if(h1Text === 'Hello World!'){
-              let mytime = new Date();
-              console.log(mytime.getHours());
-              let myTime = mytime.getHours()+':'+mytime.getMinutes()+':'+mytime.getSeconds();
-              this.setState({
-                  name:myTime
-              })
-          }else{
-              this.setState({
-                  name:'Hello World!'
-              })
-          }
+          let mytime = new Date();
+          //console.log(mytime.getHours());
+          let myTime = mytime.getHours()+':'+mytime.getMinutes()+':'+mytime.getSeconds();
+          let isClick = !this.state.isClick;
+          this.setState({
+                  isClick:isClick,
+                  name:isClick?'Hello World!':myTime
+          })
       }
       render(){
           return <div>

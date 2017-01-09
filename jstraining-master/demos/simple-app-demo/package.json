@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack app.js bundle.js",
+    "build":"webpack app.js bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,6 +12,6 @@
   "license": "ISC",
   "dependencies": {
     "jquery": "^3.1.1",
-    "webpack": "^1.13.3"
+    "webpack": "^1.14.0"
   }
 }
