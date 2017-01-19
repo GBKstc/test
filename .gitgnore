@@ -1,4 +1,32 @@
-node_modules/
-node_module/
+# phpstorm project files
 .idea
-example/
+
+# netbeans project files
+nbproject
+
+# zend studio for eclipse project files
+.buildpath
+.project
+.settings
+
+# windows thumbnail cache
+Thumbs.db
+
+# composer itself is not needed
+composer.phar
+
+# Mac DS_Store Files
+.DS_Store
+__MACOSX
+
+# phpunit itself is not needed
+phpunit.phar
+# local phpunit config
+/phpunit.xml
+
+node_modules
+.sass-cache
+npm-debug.log
+
+example
+experience
