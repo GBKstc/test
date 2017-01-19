@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .uuu{
+            width: 400px;
+            height: 1010px;
+            background: url("image/a.jpg") 200px 0 no-repeat,
+                        url('image/b.jpg') 400px 200px no-repeat;
+        }
+    </style>
+</head>
+<body>
+<!--<ul>-->
+    <!--<li id='uo'>1</li>-->
+    <!--<li>2</li>-->
+    <!--<li>3</li>-->
+<!--</ul>-->
+<!--<ul>-->
+    <!--<li>1</li>-->
+    <!--<li>2</li>-->
+    <!--<li>3</li>-->
+<!--</ul>-->
+<div class="uuu"></div>
+<div data-add="true" style="width: 100px;height: 100px;background-color: black;"></div>
+</body>
+<script>
+//    var myTime = new Date();
+//    console.log(myTime.getFullYear()+"-"+(1+myTime.getMonth())+"-"+myTime.getDate());
+
+//var liNum = document.createElement('li');
+//liNum.innerHTML = '4';
+//document.getElementsByTagName('ul').item(0).insertBefore(liNum,document.getElementsByTagName('ul').item(0).firstChild);
+//document.getElementsByTagName('ul').item(0).removeChild(document.getElementsByTagName('ul').item(0).lastChild);
+//var myUl = document.getElementsByTagName('ul').item(0).cloneNode(true);
+//console.log(myUl);
+//    document.getElementsByTagName('ul').item(0).appendChild(myUl);
+//    var ou = document.getElementById('uo');
+//    ou.addEventListener('mousedown',function(){
+//        console.log('1');
+//    })
+//    ou.addEventListener('mousemove',function(){
+//        console.log('2');
+//    })
+//    ou.addEventListener('mouseup',function(){
+//        console.log('3');
+//    })
+//var sat = true;
+//var myTime=undefined;
+//var myDiv = document.getElementsByTagName('div').item(0);
+//    myDiv.addEventListener('click',function(e){
+//        var that = this;
+//
+//        if(sat){
+//            myTime = setInterval(function(){
+//                mysetTime(that);
+//            },100);
+//            sat=false;
+//        }else{
+//            sat=true;
+//            clearInterval(myTime);
+//        }
+//        console.log(sat);
+//
+//    })
+//
+//var mysetTime = function(e){
+//      console.log(e.clientHeight);
+//    var myH = e.clientHeight,
+//        myW = e.clientWidth,
+//        add = e.dataset.add;
+//    if(add==='true'){
+//        myH++;
+//        myW++;
+//        e.style.height = myH+'px';
+//        e.style.width = myW+'px';
+//        if(myH>=200){
+//            e.dataset.add=false;
+//        }
+//    }else{
+//        myH--;
+//        myW--;
+//        e.style.width=myW+'px';
+//        e.style.height=myH+'px';
+//        if(myH<=100){
+//            e.dataset.add=true;
+//        }
+//    }
+//}
+
+//    var quickSort = function (arr) {
+//        if(arr<=1){
+//            return arr;
+//        }
+//        var pivotIndex = Math.floor(arr.length/2);
+//        var pivot = arr.splice(pivotIndex,1)[0];
+//        var right = [];
+//        var left = [];
+//        for(var i=0;i<arr.length;i++){
+//            if(arr[i]>pivot){
+//                right.push(arr[i]);
+//            }else{
+//                left.push(arr[i])
+//            }
+//        }
+//        return quickSort(left).concat([pivot],quickSort(right))
+//    }
+//    console.log(quickSort([13,82,344,65,6,7,8,9]));
+    var obj = 'abcdefg';
+    var index = obj.indexOf('efg');
+    var uu = obj.substr(index,3);
+    console.log(uu);
+</script>
+</html>
