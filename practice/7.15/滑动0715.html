@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo</title>
+  <link rel="stylesheet" href="css/idangerous.swiper.css">
+  <link rel="stylesheet" href="css/idangerous.swiper.scrollbar.css">
+  <style>
+/* Demo Styles */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.swiper-container {
+  width: 640px;
+  height: 50px;
+  text-align: center;
+}
+.swiper-slide {
+  width: 1500px;
+  background: #fff;
+}
+.swiper-slide>div{
+  float:left;
+  height: 50px;
+  line-height: 50px;
+  width: 200px;
+  text-align: center;
+}
+.swiper-scrollbar {
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  z-index: 1;
+}
+  </style>
+</head>
+<body>
+  <div class="swiper-container">
+    <div class="swiper-scrollbar"></div>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="nav_list">供应1</div>
+        <div class="nav_list">供应2</div>
+        <div class="nav_list">供应3</div>
+        <div class="nav_list">供应4</div>
+        <div class="nav_list">供应5</div>
+        <div class="nav_list">供应6</div>
+      </div>
+    </div>
+  </div>
+  <script src="js/jquery-1.10.1.min.js"></script>
+  <script src="js/idangerous.swiper-2.1.min.js"></script>
+  <script src="js/idangerous.swiper.scrollbar-2.1.js"></script>
+  <script>
+  var mySwiper = new Swiper('.swiper-container',{
+    scrollContainer: true,
+    scrollbar: {
+      container: '.swiper-scrollbar'
+    }
+  })
+  </script>
+</body>
+</html>

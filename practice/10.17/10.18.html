@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="Keywords" content="双周年，好设计，红包，免费，设计师，原创，手工，个性，定制，减价，折扣，江南布衣，独立，文艺，小清新">
+    <meta name="Description" content="921现金大礼包任意领，更有ipad mini等你拿">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <script>
+        (function(){
+            function RemInit(){
+                var dpr, rem, scale;
+                var docEl = window.document.documentElement;
+                var bodyEl = window.document.body;
+                var metaEl = window.document.querySelector('meta[name="viewport"]');
+                var psdWidth = 640/100;
+                var isAndroid = navigator.userAgent.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i);
+                dpr = 1;
+                if(navigator.userAgent.indexOf('xiangqu')>-1 && navigator.userAgent.indexOf('Android')>-1){
+                    var setWidthTime = setInterval(function(){
+                        if(docEl.clientWidth>0){
+                            clearInterval(setWidthTime);
+                        }
+                    },100)
+                }
+                rem = docEl.clientWidth * dpr / psdWidth;
+                docEl.style.fontSize = rem +'px'
+                docEl.setAttribute('data-dpr', dpr);
+                scale = 1 / dpr;
+                metaEl.setAttribute('content', 'width=' + dpr * docEl.clientWidth + ',initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale + ',user-scalable=no');
+                window.dpr = dpr;
+                window.rem = rem;
+                window.addEventListener('resize',function(){
+                    rem = docEl.clientWidth * dpr / psdWidth;
+                    docEl.style.fontSize = rem +'px'
+                })
+            }
+            RemInit();
+        })()
+    </script>
+</head>
+<body>
+<section class="canvas-view">
+    <canvas id="MyCanvas" style="display:none"></canvas>
+</section>
+<img style="display: block;margin:.5rem auto;width:5rem;" id="Img" src="" alt=""/>
+<script>
+    let MedicalRecordList = {
+        Pisces :[
+            {
+                details:['$+**+$去医院看$+失忆症+$','医生问他这病多久了','$+**+$想了想$+说+$什么病?'],
+            }/*,
+            {
+                details:['$+**+$去医院看$+失忆症+$','医生问他这病多久了','$+**+$想了想$+说+$什么病?','医生问他这病多久了'],
+            },
+            {
+                details:['$+**+$去医院看$失忆症$','医生问他这病多久了','**想了想说什么病？'],
+            }*/
+        ],
+    }
+    {
+        let Canvas = document.getElementById('MyCanvas'),
+                ctx = Canvas.getContext('2d');
+        let details = MedicalRecordList.Pisces[0].details,
+                height = 0,
+                _name = '风后';
+        Canvas.height = 50 * details.length * 2;
+        Canvas.width = window.document.documentElement.clientWidth*.9 * 2;
+        ctx.fillStyle = 'rgb(221,240,237)';
+        ctx.fillRect(0,0,Canvas.width,Canvas.height);
+        ctx.fillStyle = '#000';
+        ctx.textBaseline = 'baseline';
+        details.forEach((detail) => {
+            let _msg = detail.replace(/\*\*/g,_name),
+            _msgList = _msg.replace(/\$\+/g,'$+$').split(/\$\+|\+\$/),
+                _fontStyle = '28px Arial',
+                _fontHeight = 34*2,
+                _fontStyleMore = '72px Arial',
+                _fontHeightMore = 46*2,
+                _msgObj = {
+                    textLength:0,
+                    textHeight:_fontHeight,
+                    items:[]
+                },
+                _offsetLeft = 0,
+                _offsetTop = _fontHeight;
+        _msgList.forEach((arr) => {
+            let _obj = {};
+        if(arr){
+            ctx.font = arr.indexOf('$') > -1 ? _fontStyleMore : _fontStyle;
+            if(arr.indexOf('$') > -1){
+                _offsetTop = _fontHeightMore;
+            }
+            arr = arr.replace(/\$/g,'');
+            _obj = {
+                text:arr,
+                offsetLeft:_offsetLeft,
+                offsetTop:_offsetTop,
+                textLength:ctx.measureText(arr).width,
+                style:ctx.font,
+            }
+            _offsetLeft += _obj.textLength;
+            _msgObj.items.push(_obj);
+        }
+    })
+    _msgObj.textLength = _offsetLeft;
+    _msgObj.textHeight = _offsetTop;
+    height += _offsetTop;
+    _msgObj.items.forEach((arr) => {
+        console.log(arr);
+        let _offsetLeft = (Canvas.width - _msgObj.textLength) / 2;
+    ctx.font = arr.style;
+    ctx.fillText(arr.text,_offsetLeft+arr.offsetLeft,height);
+    })
+    })
+    let a = Canvas.toDataURL("image/png"),
+            b = Canvas.toDataURL("image/png").replace("data:image/png;base64,",""),
+            Img = document.querySelector('#Img');
+    Img.setAttribute('src',a);
+    Img.addEventListener('click',function(){
+        iOS.saveImageBase64Callback(b,function(succ){iOS.alert(succ);});
+    })
+
+
+
+    }
+
+
+</script>
+</body>
+</html>

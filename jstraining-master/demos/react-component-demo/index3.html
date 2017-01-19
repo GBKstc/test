@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="react.js"></script>
+    <script src="react-dom.js"></script>
+    <script src="babel.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+  class Mytitle extends React.Component{
+      constructor(...args){
+          super(...args);
+          this.state={
+              name:'访问者',
+              isClick:true
+          }
+      };
+      handleName(e){
+          let mytime = new Date;
+          let myTime = mytime.getHours()+':'+mytime.getMinutes()+':'+mytime.getSeconds();
+          let isClick = !this.state.isClick;
+          this.setState({
+              isClick:isClick,
+              name:isClick?'Hellow World!':myTime
+          })
+      };
+      render(){
+          return <div>
+            <p onClick={this.handleName.bind(this)}>你好！{this.state.name}</p>
+          </div>
+      }
+  }
+  ReactDOM.render(
+      <Mytitle></Mytitle>,
+      document.getElementById('example')
+  );
+
+
+
+
+  /*class MyTitle extends React.Component {
+    constructor(...args) {
+      super(...args);
+      this.state = {
+        name: '访问者'
+      };
+    }
+
+    handleChange(e) {
+      let name = e.target.value;
+      this.setState({
+        name: name
+      });
+    }
+
+    render() {
+      return <div>
+        <input type="text" onChange={this.handleChange.bind(this)} />
+        <p>你好，{this.state.name}</p>
+      </div>;
+    }
+  };
+
+  ReactDOM.render(
+    <MyTitle/>,
+    document.getElementById('example')
+  );*/
+    </script>
+  </body>
+</html>
