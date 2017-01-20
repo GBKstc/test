@@ -12,3 +12,9 @@ Word Wrap//允许长单词换行
 盒子大小
 媒体查询
 语音
+
+
+ 2.PostCSS是啥？
+ PostCSS使CSS变成JS的数据，使它变成可操作。PostCSS是基于JS插件，然后执行代码操作。
+ PostCSS自身并不会改变CSS，它只是一种插件，为执行任何的转变铺平道路。PostCSS就像一个平台。
+ 其中
