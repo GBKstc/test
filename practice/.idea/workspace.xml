@@ -58,7 +58,7 @@
       <file leaf-file-name="11.30.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/11.29/11.30.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44444445">
+            <state vertical-scroll-proportion="0.0">
               <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
               <folding />
             </state>
@@ -69,7 +69,7 @@
         <entry file="file://$PROJECT_DIR$/a01.19/practice.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.69142854">
-              <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+              <caret line="152" column="22" selection-start-line="152" selection-start-column="22" selection-end-line="152" selection-end-column="22" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -147,8 +147,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="51" />
-    <option name="y" value="61" />
+    <option name="x" value="339" />
+    <option name="y" value="15" />
     <option name="width" value="984" />
     <option name="height" value="713" />
   </component>
@@ -388,7 +388,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="51" y="61" width="984" height="713" extended-state="0" />
+    <frame x="339" y="15" width="984" height="713" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27272728" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -828,7 +828,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/11.29/11.30.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44444445">
+        <state vertical-scroll-proportion="0.0">
           <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
           <folding />
         </state>
@@ -842,7 +842,7 @@
     <entry file="file://$PROJECT_DIR$/a01.19/practice.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.69142854">
-          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+          <caret line="152" column="22" selection-start-line="152" selection-start-column="22" selection-end-line="152" selection-end-column="22" />
           <folding>
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>

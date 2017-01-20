@@ -60,6 +60,8 @@ XMLHttpRequest是AJAX的基础。XMLHttpRequest用于在后台与服务器交换
 post是通过HTTPpost机制，将表单内各个字段与其内容放置在HTML HEADER内一起发送到ACTION属性所指的URL地址。用户看不到这个过程
 （2）get传送的数据量较小，不能大于2KB。post不受大小限制。
 （3）get安全性非常低，post安全性较高。
+
+
 5.严格模式与混杂模式——如何触发这两种模式，区分它们有何意义。
 触发的方法使用DOCTYPE来定义的。DOCTYPE是一组机器可读的规则，它指示HTML文档中允许有什么，不允许有什么。
 所以DOCTYPE正是用来告诉浏览器使用哪种DTD，一般放在开头用来告诉别人这个文档的类型风格。
