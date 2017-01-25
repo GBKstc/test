@@ -4,18 +4,29 @@
     <meta charset="UTF-8">
     <title></title>
     <style>
-        .box{ width:300px;border:1px solid #000;overflow:auto;}
-
-        .div1{ width:260px;height:400px;background:Red;float:left;}
+        .a{
+            float:left;
+            position:relative;
+            left:50%;
+            width: 100px;
+            height: 100px;
+        }
+        .b{
+            float:left;
+            position:relative;
+            right:50%;
+            width: 20px;
+            height: 30px;
+            background-color: #35302c;
+        }
 
 
     </style>
 </head>
 <body>
-<div class="box">
-
-    <div class="div1"></div>
-
+<div class="a">
+    <div class="b"></div>
 </div>
+
 </body>
 </html>

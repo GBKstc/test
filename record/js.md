@@ -253,7 +253,7 @@ AJAX的使用。
 send(string);(POST请求时候，才需要设置参数);
 服务区响应，获取数据 resposeText   resposeXML
 获取数据有两种方式 一种同步处理 一种异步处理。
-document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+同步请求document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
 异步通过请求状态改变事件进行处理。onreadystatechange
 判断请求状态和响应状态码
 请求状态：
