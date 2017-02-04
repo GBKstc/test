@@ -190,7 +190,8 @@ call(thisObj,Object)
 call:用来代替另外一个对象调用一个方法。call方法可将一个函数的对象上下文从初始的上下文改变为由thisObj指定的新对象。
 
 apply(thisObj,[argArray])
-如果 argArray 不是一个有效的数组或者不是 arguments 对象，那么将导致一个 TypeError。如果没有提供 argArray 和 thisObj 任何一个参数，那么 Global 对象将被用作 thisObj， 并且无法被传递任何参数。
+如果 argArray 不是一个有效的数组或者不是 arguments 对象，那么将导致一个 TypeError。如果没有提供 argArray 和 thisObj 任何一个参数，那么 Global 对象
+将被用作 thisObj， 并且无法被传递任何参数。
 
 
 24.什么是”use strict”，使用它的好处是什么。
@@ -198,7 +199,7 @@ js6添加了第二种运行模式，严格模式。这种模式使得JS在更加
 好处：(1)消除JS语法的一些不合理，不严谨之处，减少一些怪异行为;
 (2)消除代码运行的一些不安全之处，保证代码运行的安全。
 (3)提高编译器效率，增加运行速度。
-(4)为未来新版本的JS坐好铺垫
+(4)为未来新版本的JS做好铺垫
 (IE6789不支持严格模式)
 缺点：在JS压缩之后，会出现严格声明不生效的情况。
 
