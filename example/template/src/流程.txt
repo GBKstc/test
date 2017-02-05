@@ -1,0 +1,6 @@
+1.安装node.js 验证 node -v
+2.安装npm 验证 npm -v
+3.安装git
+4.安装cnpm  $ npm install -g cnpm --registry=https://registry.npm.taobao.org
+5.安装gulp cnpm install --global gulp（全局）cnpm install --save-dev gulp（项目开发依赖）
+http://www.cr173.com/soft/130969.html webStorm 下载

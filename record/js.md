@@ -295,7 +295,7 @@ AJAX和H5新加的Web Worker就是采用了异步的方式。
 5)宽放大模式：为了防止第一个执行的部分有可能加载一个不存在空对象，这时就采用"宽放大模式"
 6)输入全局变量：独立性是模块的重要特点，模块内部最好不与程序的其他部分直接交互。为了在模块内部调用全局变量，必须显式地将其他变量输入模块
 
-
+http://www.ruanyifeng.com/blog/2012/10/javascript_module.html
 36.如何实现浏览器内多个标签页之间的通信？
 1)使用local Storage:localStorage.setItem(key,value);添加内容，storage事件监听添加，修改，删除的动作。
 2)使用Cookie+setlinterval 用Cookie进行储存，用setlinterval进行检测。

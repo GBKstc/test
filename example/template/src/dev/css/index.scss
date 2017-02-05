@@ -1,0 +1,16 @@
+@import "common/config";
+@import "common/reset";
+//$size:10;
+*{
+  @include remsize(font-size,24);
+}
+ul{
+  width: 7.5rem;
+  height: 10rem;
+  background-color: #009999;
+  color: black;
+  li{
+    width: 4rem;
+    height: 1rem;
+  }
+}
