@@ -4,8 +4,10 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "webpack-dev-server --inline --hot",
-    "build": "webpack"
+    "start": "npm run webpack-dev",
+    "build": "webpack",
+    "webpack-dev": "webpack-dev-server --progress --colors --hot --inline --config webpack.config.js --host 0.0.0.0",
+    "webpack": "rm -rf dist && NODE_ENV=development webpack --progress -p --config webpack.config.js"
   },
   "keywords": [],
   "author": "",
